@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camara</title>
     <meta name="autho" content="Alba Sánchez Olmedo" />
     <meta name="keywords" content="Formulario,HTML,CSS" />
-    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/jpg" href="img/icons8-cámara-16.png">
 </head>
+
 <body>
     <header id="cabecera">
         <!-- Img del Logo -->
         <picture class="blq_logo"><img src="img/icons8-cámara-100 (1).png" alt=""></picture>
         <!-- Menú -->
-        <nav class="blq_menu">
-            <ul class="opc_menu">
-                <li class="inicio"><a href="html/inicio.html">Inicio</a></li>
-                <li class="camara"><a href="html/nacional.html">Camara</a></li>
-                <li class="galeria"><a href="html/contacto.html">Galería</a></li>
-            </ul>
-        </nav>
+        <h1>Cámara Virtual</h1>
     </header>
 
-    <section>
-        <h2></h2>
+    <section id="bloque-camara">
+        <!-- Icono Accesibilidad -->
+        <div class="icon-accesibilidad" onclick="mostrarOcultar()" accesskey="h">
+            <img src="img/accesibilidad-icon.svg" alt="icono-accesibilidad">
+        </div>
+        <!-- Barra lateral de Accesibilidad -->
+        <div class="accesibilidad">
+            <h2>Accesibilidad</h2>
+            <button id="aumentar">Aumentar Fuente</button>
+            <button id="reducir">Reducir Fuente</button>
+            <button id="escalaGris">Escala Grises</button>
+            <button id="altoContras">Alto Contraste</button>
+            <button id="reset">Restablecer</button>
+        </div>
+        <h2>Cámara</h2>
         <video id="camara" autoplay playinline></video>
         <p>
             <button id="tomar-foto">Tomar foto</button>
             <button id="borrar-todo">Borrar Todo</button>
         </p>
-        <h2>Galería de Fotos</h2>
-        <div id="galeria">
-
-        </div>
     </section>
 
-
+    <section id="bloque-galeria">
+        <h2>Galería</h2>
+        <div id="galeria"></div>
+    </section>
+    
+    <footer>
+        <picture class="blq_logo"><img src="img/icons8-cámara-100 (1).png" alt=""></picture>
+    </footer>
     <script src="js/script.js"></script>
 </body>
+
 </html>
